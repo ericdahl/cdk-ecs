@@ -16,5 +16,3 @@ class EcsClusterStack(core.Stack):
             asg = self.cluster.add_capacity("CdkClusterCapacity",
                                             instance_type=ec2.InstanceType.of(ec2.InstanceClass.BURSTABLE3_AMD,
                                                                               ec2.InstanceSize.SMALL))
-
-            # self.cluster.add_capacity("CdkClusterCapacity", instance_type="t3.small")
