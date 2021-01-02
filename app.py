@@ -9,9 +9,9 @@ from ecs_service_ec2_nginx.ecs_service_ec2_nginx import EcsServiceEc2Nginx
 
 app = core.App()
 
-vpc_stack = VpcStack(app, "cdk-vpc")
+vpc_stack = VpcStack(app, "cdk-ecs")
 ecs_cluster_stack = EcsClusterStack(app,
-                                    "cdk-ecs",
+                                    "cdk-ecs-cluster",
                                     vpc=vpc_stack.vpc,
                                     ec2_capacity=True)
 
