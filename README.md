@@ -30,6 +30,16 @@ cdk-ecs-fargate-nginx.nginxServiceURL39DAA5BC = http://cdk-e-nginx-1W4VIZUD1XMEM
 
 ```
 
+## Optional
+
+### Set key pair name to allow for SSH in to EC2 nodes
+
+```
+$ export EC2_KEY_PAIR_NAME=<your key name>
+$ cdk deploy --all
+$ ssh -J <bastion_ip> <target_ip>
+```
+
 ## Other commands
 
 ```
